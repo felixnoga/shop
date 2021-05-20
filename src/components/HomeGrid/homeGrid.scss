@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.home-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
+}

@@ -10,7 +10,13 @@ const HomeGrid = () => {
   return (
     <div className="home-grid">
       {sections.map(({ title, id, imageUrl, size }) => (
-        <HomeItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        <HomeItem
+          key={id}
+          title={title}
+          imageUrl={imageUrl}
+          size={size}
+          id={id}
+        />
       ))}
     </div>
   );

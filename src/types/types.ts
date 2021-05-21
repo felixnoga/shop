@@ -2,6 +2,7 @@ export interface homeItemProps {
   title: string;
   imageUrl: string;
   size?: string;
+  id: number;
 }
 
 export interface ISection {

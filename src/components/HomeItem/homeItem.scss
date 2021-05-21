@@ -8,9 +8,19 @@
   align-items: center;
   justify-content: center;
   border: 1px solid $dark-grey;
-  margin: 0 0.5rem 1rem;
-  background-position: center;
-  background-size: cover;
+  margin: 1rem 0.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+
+  .grid-item-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   &.large {
     height: 380px;
@@ -32,6 +42,7 @@
   }
   .grid-item-content {
     display: flex;
+    position: absolute;
     height: 90px;
     flex-direction: column;
     justify-content: center;
@@ -39,8 +50,12 @@
     padding: 2rem;
     border: 1px solid $dark-grey;
     background-color: rgba($lighter-grey, 0.7);
+    z-index: 4;
     @media (max-width: $breakpoint-tablet) {
       height: 60px;
+    }
+    &:hover {
+      cursor: pointer;
     }
 
     .content-title {
